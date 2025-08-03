@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta de Amor para Mi Pareja</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas para corazones flotantes -->
+  <canvas id="heartsCanvas" style="position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:999;"></canvas>
+
+  <header class="hero">
+    <h1>Para Ti, Mi Amor</h1>
+    <p class="subtitle">Una carta hecha con todo mi corazón</p>
+    <button id="showLetterBtn" aria-label="Mostrar carta">Abrir Carta 💌</button>
+  </header>
+
+  <main class="content" style="position: relative;">
+    <!-- Corazón SVG animado de apertura -->
+    <div id="openHeart" class="open-heart hidden" aria-hidden="true">
+      <svg viewBox="0 0 100 90" width="100" height="90" xmlns="http://www.w3.org/2000/svg" >
+        <path id="heartPath" fill="#ff4da6" stroke="#d63384" stroke-width="2" d="
+          M50 85 
+          L15 50 
+          A20 20 0 0 1 50 20 
+          A20 20 0 0 1 85 50 
+          L50 85 
+          Z
+        "/>
+      </svg>
+    </div>
+
+    <section id="letter" class="letter hidden" aria-live="polite">
+      <h2>Carta para ti</h2>
+      <p>Amor mío,</p>
+
+  <p>
+    Hoy quise regalarte algo más que palabras sueltas. Algo que hable por mí cuando a veces no sé cómo expresarlo bien. Sé que no soy el más detallista, ni el más romántico todos los días, pero dentro de mí vive un amor profundo por ti. Uno que no descansa, que te piensa incluso en silencio, que sonríe con solo verte o recordarte.
+  </p>
+
+  <p>
+    He fallado muchas veces en demostrar todo lo que significas para mí. Me he quedado corto en detalles, en abrazos, en “te amo” que debí haberte dicho más seguido. Pero quiero que sepas que cada día que estás a mi lado es una bendición. Que me haces mejor, que tu amor ha sido refugio, casa, impulso y paz.
+  </p>
+
+  <p>
+    No quiero ser solo alguien que te diga que te ama. Quiero demostrártelo. Quiero acompañarte en cada sueño, en cada miedo, en cada nueva aventura. Y si alguna vez te hice sentir menos importante de lo que eres, hoy te pido perdón desde lo más sincero de mi alma.
+  </p>
+
+  <p>
+    Te amo con cada parte de mí, con cada error aprendido, con cada plan futuro donde solo tú estás. Gracias por ser tú, por seguir a mi lado, por mirar conmigo en la misma dirección, aunque a veces me equivoque en el camino.
+  </p>
+
+  <p>
+    Esto no es solo una carta. Es un pedacito de mi corazón, abierto, para ti.
+  </p>
+
+  <p>
+    Con todo mi amor, siempre:<br />
+    Tu Martín.
+    </section>
+
+    <section class="gallery-section">
+  <h2>📸 Nuestros momentos juntos</h2>
+  <div class="gallery">
+    <img src="fotos/IMG_6925.jpg" alt="Foto 1" tabindex="0" />
+    <img src="fotos/IMG_7481.jpg" alt="Foto 2" tabindex="0" />
+    <img src="fotos/IMG_7699 (1).jpg" alt="Foto 3" tabindex="0" />
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+    <button id="closeLightbox" class="close-btn" aria-label="Cerrar vista ampliada">&times;</button>
+    <img src="" alt="" />
+  </div>
+
+  <footer>
+    <p>Hecho con amor 💌 por Martín</p>
+  </footer>
+
+  <!-- Reproductor de audio oculto -->
+  <audio id="loveMusic" src="musica.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
